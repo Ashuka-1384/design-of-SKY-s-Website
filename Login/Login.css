@@ -1,0 +1,382 @@
+/*------------------------------------------------رنگ های اصلی----------------------------------------------------*/
+:root{
+    --Imperial-Gold: #f5c242;
+    --Arctic-White: #FCFCFC;
+    --Void-Black: #0A0A0A;
+    --Celestial-indigo: #2B2D42;
+}
+/*-----------------------------------------------کد اصلی-----------------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    /* background-color: var(--Celestial-indigo); */
+    background: linear-gradient(to bottom , var(--Celestial-indigo) , #000);
+    overflow: hidden;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+/*-----------------------------------------------SkyLogo-----------------------------------------------------*/
+.SkyImage{    
+    margin: -300px 0 -300px 0;
+    filter: drop-shadow(0 0 200px gold);
+    transform: scale(0.489);
+    transition: transform 0.5s ease;
+    animation: MoveInLogo 3s linear;
+    z-index: 50;
+    will-change: transform, opacity;
+    cursor:cell;
+}
+/* .SkyImage:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 5px gold);
+    
+} */
+/* .SkyImage:active{
+    animation: LogoMoveMent 10s linear;
+} */
+ /* اگر یک تکست زیر لوگو اسکای قرار دادید این کد زیر را از کامند در بیاورید */
+/* .SkyText{
+    margin: -10px 0 10px 0;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--Imperial-Gold);
+    text-shadow: 0 0 5px var(--Imperial-Gold);
+    display: flex;
+    flex-direction: inherit;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+} */
+/*----------------------------------------------Login Inputs------------------------------------------------------*/
+.Login{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.Login .text{
+    width: 100%;
+    min-width: 200px;
+    max-width: 400px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid var(--Imperial-Gold);
+    background-color: transparent;
+    color: var(--Arctic-White);
+    text-shadow: 0 0 1px var(--Arctic-White);
+    background: linear-gradient(135deg , var(--Celestial-indigo) , var(--Void-Black));
+    font-size: 20px;
+    display: flex;
+    flex-direction: inherit;
+    z-index: 100;
+    transition: all 0.7s ease;
+}
+.Login .text:hover{
+    background: linear-gradient(to left , var(--Void-Black) , #393c5e);
+}
+.Login .text.Username {
+    animation: MoveInInput1 2.5s linear;
+}
+.Login .text.Password{
+    animation: MoveInInput2 2.5s linear;
+}
+.Login .button{
+    width: 100%;
+    min-width: 200px;
+    max-width: 400px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid var(--Imperial-Gold);
+    background-color: var(--Imperial-Gold);
+    color: var(--Celestial-indigo);
+    font-size: 21px;
+    font-weight: 700;
+    cursor: pointer;
+    text-shadow: 0 0 3px var(--Celestial-indigo);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.8s ease;
+    animation: MoveInLogin 2.5s linear;
+}
+.Login .button:hover{
+    background: linear-gradient(45deg , var(--Celestial-indigo) , var(--Void-Black));
+    color: var(--Imperial-Gold);
+    text-shadow: 0 0 3px gold;
+}
+.Login p{
+    /* margin: 10px 0 10px; */
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 18px;
+    text-shadow: 0 0 8px var(--Imperial-Gold);
+    filter: drop-shadow(0 0 8px var(--Imperial-Gold));
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--Imperial-Gold);
+    animation: MoveInLogin 3.5s linear;
+
+}
+.Login a{
+    margin: 0 0 0 5px;
+    font-weight: 700;
+    text-shadow: 0 0 8px var(--Celestial-indigo);
+    filter: drop-shadow(0 0 8px var(--Arctic-White));
+    color: var(--Imperial-Gold);
+    text-decoration: none;
+    transition: all 0.7s;
+}
+.Login a:hover{
+    text-shadow: 0 0 15px var(--Celestial-indigo);
+    filter: drop-shadow(0 0 15px var(--Arctic-White));
+    color: var(--Arctic-White);
+}
+
+/*------------------------------------------------Animations----------------------------------------------------*/
+@keyframes MoveInLogo{
+    0%{
+        opacity: 0%;
+        transform: scale(4);
+    }
+    80%{
+        filter: drop-shadow(0 0 10px gold);
+    }
+    100%{
+        opacity: 100%;
+        transform: scale(0.489);
+        filter: drop-shadow(0 0 100px gold);
+    }
+}
+@keyframes MoveInInput1{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
+@keyframes MoveInInput2{
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
+@keyframes MoveInLogin {
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 100;
+        transform: translateY(0);
+    }
+}
+/* @keyframes TextEffect{
+    0%{
+        background: linear-gradient(45deg , white , blue);
+    }
+    50%{
+        background: linear-gradient(90deg , white , var(--Celestial-indigo));
+    }
+    75%{
+        background: linear-gradient(135deg , var(--Arctic-White) , var(--Celestial-indigo));
+    }
+    100%{
+        background: linear-gradient(180deg , var(--Void-Black) , var(--Celestial-indigo));
+    }
+} */
+/* @keyframes LogoMoveMent {
+    0%{
+        transform: scale(0.489);
+        transform: translateY(10px);
+    }
+    20%{
+        transform: translateY(-10px);
+    }
+    40%{
+        transform: translateY(10px);
+    }
+    60%{
+        transform: translateY(-10px);
+    }
+    80%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: scale(0.489);
+        transform: translateY(-10px);
+    }
+} */
+/* @keyframes Box1Animation {
+    0%{
+        top: -10%;
+        left: -10%;
+        box-shadow: -10px -10px 15px 20px #ff0000;
+    }
+    50%{
+        box-shadow: -10px -10px 35px 17px #ff0000;
+    }
+    60%{
+        top: 120%;
+        left: 110%;
+        box-shadow: -10px -10px 400px 100px #ff0000;
+    }
+    100%{
+        top: 120%;
+        left: 110%;
+        box-shadow: -10px -10px 15px 20px #ff0000;
+    }
+}
+@keyframes Box2Animation {
+    0%{
+        top: 10%;
+        left: -10%;
+        box-shadow: -10px -10px 17px 22px #ff0000;
+    }
+    50%{
+        box-shadow: -10px -10px 40px 20px #ff0000;
+    }
+    60%{
+        top: 90%;
+        left: 110%;
+        box-shadow: -10px -10px 500px 200px #ff0000;
+    }
+    100%{
+        top: 90%;
+        left: 110%;
+        box-shadow: -10px -10px 17px 22px #ff0000;
+    }
+}
+@keyframes Box3Animation {
+    0%{
+        top: -10%;
+        left: 10%;
+        box-shadow: -10px -10px 19px 24px #ff0000;
+    }
+    50%{
+        box-shadow: -10px -10px 50px 25px #ff0000;
+    }
+    60%{
+        top: 110%;
+        left: 90%;
+        box-shadow: -10px -10px 600px 300px #ff0000;
+    }
+    100%{
+        top: 110%;
+        left: 90%;
+        box-shadow: -10px -10px 19px 24px #ff0000;
+    }
+}
+@keyframes Box4Animation {
+    0%{
+        top: -20%;
+        left: 10%;
+        box-shadow: -10px -10px 25px 30px #ff0000;
+    }
+    50%{
+        box-shadow: -10px -10px 80px 50px #ff0000;
+    }
+    60%{
+        top: 120%;
+        left: 80%;
+        box-shadow: -10px -10px 700px 400px #ff0000;
+    }
+    100%{
+        top: 110%;
+        left: 90%;
+        box-shadow: -10px -10px 25px 30px #ff0000;
+    }
+}
+@keyframes Box5Animation {
+    0%{
+        top: 10%;
+        left: -20%;
+        box-shadow: -10px -10px 50px 60px #ff0000;
+    }
+    50%{
+        box-shadow: -10px -10px 100px 80px #ff0000;
+    }
+    60%{
+        top: 70%;
+        left: 130%;
+        box-shadow: -10px -10px 1000px 600px #ff0000;
+    }
+    100%{
+        top: 70%;
+        left: 130%;
+        box-shadow: -10px -10px 50px 60px #ff0000;
+    }
+} */
+/* @keyframes Stars{
+    0% , 100%{
+        filter: drop-shadow(0 0 10px var(--Imperial-Gold));
+    }
+    50%{
+        filter: drop-shadow(0 0 80px var(--Imperial-Gold));
+    }
+} */
+/*------------------------------------------------Responsive----------------------------------------------------*/
+@media (max-width: 768px) {
+    .SkyImage{
+        margin: -300px 0 -350px 0;
+        transform: scale(0.4);
+    }
+    .Login p{
+        font-size: 16px;
+    }
+}
+@media (max-width: 600px) {
+    .SkyImage{
+        margin: -300px 0 -370px 0;
+        transform: scale(0.3);
+    }
+    .Login .text , .Login .button{
+        max-width: 300px;
+    }
+    .Login p{
+        font-size: 12px;
+    }
+}
+@media (max-width: 450px) {
+    .SkyImage{
+        margin: -300px 0 -390px 0;
+        transform: scale(0.22);
+    }
+    .Login .text , .Login .button{
+        max-width: 200px;
+    }
+    .Login p{
+        font-size: 9px;
+    }
+}
+@media (max-width: 330px) {
+    .SkyImage{
+        margin: -300px 0 -390px 0;
+        transform: scale(0.21);
+    }
+    .Login .text , .Login .button{
+        max-width: 200px;
+    }
+}

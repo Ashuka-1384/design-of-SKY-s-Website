@@ -1,0 +1,519 @@
+/*------------------------------------------------رنگ های اصلی----------------------------------------------------*/
+:root{
+    --Imperial-Gold: #f5c242;
+    --Arctic-White: #FCFCFC;
+    --Void-Black: #0A0A0A;
+    --Celestial-indigo: #2B2D42;
+}
+/*-----------------------------------------------کد اصلی-----------------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    /* overflow: hidden; */
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+::selection {
+  background-color: var(--Imperial-Gold);
+  color: var(--Void-Black);
+  text-shadow: 0 0 10px var(--Void-Black);
+}
+body{
+    background-color: #181a2d;
+    margin: 0 auto;
+    min-height: 100vh;
+    /* background: linear-gradient(to bottom , var(--Celestial-indigo) , #000); */
+}
+.Container{
+    margin: 3vh auto;
+    width: 60%;
+    min-height: 94vh;
+    border-radius: 15px;
+    box-shadow: 1px 1px 20px 5px var(--Void-Black);
+    background: linear-gradient(to bottom , var(--Celestial-indigo) , #000);
+}
+/*------------------------------------------------Header----------------------------------------------------*/
+.Header{
+    position: sticky;
+    top: 0;
+    margin: 0;
+    padding: 20px 50px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: var(--Celestial-indigo);
+    border-bottom: 3px solid var(--Imperial-Gold);
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+.SkyLogo.head{
+    margin: 10px 50px 0 0;
+    transform: scale(1.3);
+    flex: 1;
+}
+.NavBar{
+    margin: 40px 30px 0 0;
+}
+.NavBar a{
+    margin: 10px 12px;
+    color: var(--Arctic-White);
+    flex: 2;
+    transition: all 0.7s;
+}
+.NavBar a:hover , .NavBar .Home{
+    color: var(--Imperial-Gold);
+    text-shadow: 1px 1px 3px var(--Imperial-Gold);
+}
+.NavBar a:active , .NavBar .Home{
+    color: var(--Imperial-Gold);
+    text-shadow: 1px 1px 3px var(--Imperial-Gold);
+}
+.HideMenu{
+    margin: 38px 12px;
+    font-size: 24px;
+    color: var(--Arctic-White);
+    flex: 3;
+    cursor: pointer;
+    display: none;
+}
+/*------------------------------------------------Content----------------------------------------------------*/
+.Content{
+    color: var(--Arctic-White);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Content h1{
+    width: 80%;
+    margin: 20px 10%;
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.Content p{
+    width: 50%;
+    margin: 0 25%;
+    text-align: center;
+}
+.Content button{
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 2px 2px 5px var(--Void-Black);
+    background-color: var(--Imperial-Gold);
+    color: var(--Void-Black);
+    text-align: center;
+    display: block;
+    transition: all 0.7s;
+}
+.Content button:hover{
+    color: var(--Imperial-Gold);
+    background-color: var(--Void-Black);
+    border: 1px solid var(--Imperial-Gold);
+    text-shadow: 0 0 5px var(--Imperial-Gold);
+    box-shadow: 0 0 3px 1px var(--Imperial-Gold);
+}
+
+
+
+.OurServices{
+    margin: 20px 0;
+    color: var(--Arctic-White);
+    text-align: center;
+    background-color: rgb(43, 45, 66 , 0.01);
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+}
+.OurServices h1{
+    margin: 20px 0;
+    width: 100%;
+    grid-column: 1/-1;
+}
+.OurServices h1 , .OurServices i{
+    color: var(--Imperial-Gold);
+    letter-spacing: 2px;
+}
+.Service{
+    margin: 5px 16px;
+    /* max-width: 200px; */
+    max-height: 300px;
+    background-color: var(--Celestial-indigo);
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.7s;
+}
+.Service:hover{
+    box-shadow: 1px 1px 10px var(--Arctic-White);
+}
+.Service a{
+    color: var(--Arctic-White);
+}
+.Service i{
+    font-size: 55px;
+    margin: 10px 0;
+}
+.Service h3{
+    margin: 5px 0;
+}
+.Service p{
+    width: 90%;
+    margin: 10px 5%;
+}
+
+
+
+.Projects{
+    margin: 20px 0;
+    color: var(--Arctic-White);
+    text-align: center;
+    background-color: rgb(43, 45, 66 , 0.01);
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: 1fr 2.5fr;
+}
+.Projects h1{
+    margin: 20px 0;
+    width: 100%;
+    grid-column: 1/-1;
+    color: var(--Imperial-Gold);
+}
+.Project{
+    margin: 5px 16px;
+    background-color: var(--Celestial-indigo);
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.7s;
+}
+.Project h2{
+    margin: 40% 0;
+}
+.Project:hover{
+    box-shadow: 1px 1px 10px var(--Arctic-White);
+}
+
+
+
+.AboutSky{
+    margin: 20px 0;
+    color: var(--Arctic-White);
+    text-align: center;
+    background-color: rgb(43, 45, 66 , 0.01);
+}
+.AboutSky h1{
+    margin: 20px 0;
+    width: 100%;
+    color: var(--Imperial-Gold);
+}
+.AboutSky p{
+    width: 90%;
+    margin: 5px 5%;
+}
+/*------------------------------------------------Support----------------------------------------------------*/
+.Support{
+    display: flex;
+}
+.Support button{
+    margin: 0 0 20px 20px;
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    padding: 10px 20px;
+    border-radius: 100px;
+    border: none;
+    background-color: var(--Imperial-Gold);
+    color: var(--Void-Black);
+    font-size: 50px;
+    font-weight: 600;
+    transition: all 0.7s;
+}
+.Support button:hover{
+    background-color: var(--Void-Black);
+    color: var(--Imperial-Gold);
+    box-shadow: 1px 1px 15px var(--Imperial-Gold);
+}
+/* .Support .SChat{
+    display: none;
+} */
+ .Support .SChat {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    left: 50px;
+    bottom: 50px;
+    width: 300px;
+    height: 400px;
+    background: var(--Celestial-indigo);
+    border-radius: 15px;
+    box-shadow: 0 0 10px var(--Imperial-Gold);
+    color: var(--Arctic-White);
+}
+.SChat {
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    width: 300px;
+    height: 400px;
+    background: var(--Celestial-indigo);
+    border-radius: 15px;
+    box-shadow: 0 0 10px var(--Imperial-Gold);
+    color: var(--Arctic-White);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.SChat .SHeader a{
+    margin: 0 0 20px 20px;
+    position: fixed;
+    left: 290px;
+    bottom: 390px;
+    padding: 10px 15px;
+    border-radius: 100px;
+    border: none;
+    background-color: var(--Imperial-Gold);
+    color: var(--Void-Black);
+    font-size: 30px;
+    font-weight: 600;
+    box-shadow: 1px 1px 15px var(--Void-Black);
+    transition: all 0.7s;
+}
+.SChat .SHeader a:hover{
+    background-color: var(--Void-Black);
+    color: var(--Imperial-Gold);
+    box-shadow: 1px 1px 15px var(--Imperial-Gold);
+}
+.SHeader{
+    width: 100%;
+    height: auto;
+    margin: 0 0 15px 0;
+    border-radius: 0 15px 15px 0;
+    background: linear-gradient(to right , var(--Celestial-indigo) , var(--Imperial-Gold));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.SLogo{
+    max-width: 100px;
+    max-width: 100px;
+    border: 2px solid var(--Imperial-Gold);
+    border-radius: 45px;
+    transform: scale(0.6);
+    box-shadow: -2px -2px 15px var(--Void-Black);
+    flex: 1;
+}
+.SChat h2{
+    display: flex;
+    flex: 2;
+    text-shadow: -2px 2px 3px var(--Void-Black);
+}
+.SMessages{
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+.Message{
+    margin: 10px 0 0 10px;
+    max-width: 200px;
+    height: auto;
+    background: linear-gradient(to right , var(--Celestial-indigo) , #1e1f27);
+    border-radius: 0 15px 15px 0;
+}
+.YourMessage{
+    margin: 10px 10px 0 100px;
+    padding: 10px;
+    max-width: 300px;
+    height: auto;
+    background: linear-gradient(to left , var(--Celestial-indigo) , #797a83);
+    border-radius:  15px 0 0 15px;
+    text-align: left;
+}
+.SChat p{
+    padding: 10px;
+    text-align: left;
+    text-shadow: -1px 1px 3px var(--Arctic-White);
+}
+.SChat span{
+    text-shadow: 1px 1px 3px var(--Void-Black);
+}
+.SFooter{
+    display: flex;
+    padding: 0;
+    gap: 1px;
+    border-top: 1px solid var(--Imperial-Gold);
+}
+.SChat input{
+    /* position: sticky;
+    bottom: 0;
+    width: 80%;
+    border-radius: 0 0 0 15px;
+    margin: 20px 0 0 0;
+    padding: 15px 0;
+    flex: 1; */
+    flex: 1;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 0 0 0 15px;
+    outline: none;
+    background-color: transparent;
+    color: var(--Arctic-White);
+}
+.SChat .SFooter .Send{
+    position: inherit;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 14px 23px;
+    font-size: 17px;
+    box-shadow: 1px 1px 15px var(--Void-Black);
+    border-radius: 0 0 15px 0;
+    background-color: var(--Imperial-Gold);
+    color: var(--Void-Black);
+    text-align: center;
+    flex: 2;
+}
+.SChat .SFooter .Send:hover{
+    background-color: var(--Void-Black);
+    color: var(--Imperial-Gold);
+    box-shadow: 1px 1px 15px var(--Imperial-Gold);
+}
+/*------------------------------------------------GoUp----------------------------------------------------*/
+.GoUp button{
+    margin: 0 0 20px 20px;
+    position: fixed;
+    right: 40px;
+    bottom: 30px;
+    padding: 10px 20px;
+    border-radius: 100px;
+    border: none;
+    background-color: var(--Imperial-Gold);
+    color: var(--Void-Black);
+    font-size: 50px;
+    font-weight: 600;
+    transition: all 0.7s;
+}
+.GoUp button:hover{
+    background-color: var(--Void-Black);
+    color: var(--Imperial-Gold);
+    box-shadow: 1px 1px 15px var(--Imperial-Gold);
+}
+/*------------------------------------------------Footer----------------------------------------------------*/
+.Footer{
+    width: 100%;
+    margin: 20px 0;
+    padding: 20px 50px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--Arctic-White);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.SkyLogo.foot{
+    margin: 0 0 0 0;
+    transform: scale(1.3);
+    cursor: auto;
+}
+/* .CopyRight{
+    
+} */
+.Footer .social-Icons a{
+    color: var(--Arctic-White);
+    font-size: 25px;
+    transition: all 0.7s;
+}
+.Footer .social-Icons a:hover:nth-child(1){
+    color: #FF0000;
+}
+.Footer .social-Icons a:hover:nth-child(2){
+    color: #E1306C;
+}
+.Footer .social-Icons a:hover:nth-child(3){
+    color: #9146FF;
+}
+.Footer .social-Icons a:hover:nth-child(4){
+    color: #0088cc;
+}
+/*------------------------------------------------Animations----------------------------------------------------*/
+
+/*------------------------------------------------Responsive----------------------------------------------------*/
+/*آشوکا از اینجا به پایین برا تو*/
+/*⣿⣿⣿⢿⣿⣻⣟⣿⣻⣟⣿⣻⣟⣿⣻⣟⣿⣻⣟⣿⣻⣟⣿⣻⣟⣿⣻⣟⣿⣻⣟⣿⣻⣟⣿⣻⣟⣿⣻⣟⣿⣻⣟⣿⣻⣟⣿⣻⣟⣿⣻⣟⣿⣻⣟⣿⣻⣟⣿⣻⣟⣿⣻⣟⡿⣽⣻⡽⢯⡿⣽⣫⡟⣽⣫⢟⣽⢫⡟⣽⢫⡟⣭⡻⣭⢻⡭⢯⡽⣭⢯⡽⣭⠻⣜⡣⢟⣜⡣⢟⡜⣣⢛⡜⣣⢛⡜⣣⢏⡼⣡⢏⡼⣡⢏⡼⣡⢏⡼⡱
+⣿⣷⣻⣟⣾⣳⢿⣞⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⣞⡷⣯⣟⡷⣯⡽⣯⢷⣏⡷⣽⣣⢯⣟⢮⣯⢽⣚⡷⣹⢧⣻⡜⣧⣛⢧⡻⣜⢮⡳⣭⢻⡔⣏⡳⢎⡝⢮⠼⣱⢫⠼⣱⢫⡜⡱⢎⠶⡱⢎⠶⡱⢎⠶⡱⢎⠶⣙
+⣿⢿⣽⡾⣷⣟⣯⢿⡾⣽⣻⢾⣽⣻⢾⣽⣻⢾⣽⣻⣞⣯⣟⣾⣳⣟⣾⣳⣟⣾⣳⣟⣾⣳⣟⣾⣳⣟⣾⣽⣻⢾⣽⣻⢾⣽⢾⣯⢷⣟⣾⣳⣟⣾⣳⣟⣾⣳⣟⣾⣳⢯⣟⡷⢯⣟⡷⣻⣵⡻⣾⣱⢷⣫⠷⣞⢯⡞⣧⢟⡼⣏⢷⣣⢟⡵⣫⢞⡽⣎⢷⡹⣞⢣⡞⣱⢭⡛⡼⣙⡞⣥⣋⢗⣣⠳⣜⡹⢎⡳⣙⢎⡳⣙⢎⡳⣙⢮⡹⣒
+⣿⣯⣷⢿⣳⣯⣟⣯⡿⣽⢯⣿⢾⣽⣻⢾⣽⣻⣞⡷⣯⢷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⢯⣷⣟⡿⣞⡿⣞⣯⡿⣞⣷⣻⣞⣷⣻⣞⣷⣻⣾⣽⣿⣾⣿⣿⣾⣿⣷⣿⣷⣯⣟⣾⣭⢿⡹⣾⣹⢮⣏⢷⣫⢞⡵⣫⢷⡹⣎⢷⡹⣎⠷⡭⢮⡕⣏⠶⣹⢱⢣⠞⡴⣩⠞⡴⣋⠶⣙⢮⡱⣍⢮⡱⣍⢮⡱⡍⢶⣑⢣
+⣿⡾⣽⡿⣽⡾⣽⣳⡿⣯⣟⣾⣻⢾⣽⣻⣞⡷⣯⢿⡽⣯⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⢾⡽⣟⣾⣽⣻⡽⣟⣯⣷⣿⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣧⣛⡾⣼⢣⡟⣮⢳⡝⣮⢳⡝⣮⠳⣭⢛⡼⢣⢞⡬⡳⣍⢎⢧⡛⡴⢣⡛⡴⣍⢞⡱⢎⡵⣊⠶⡱⢎⡖⣱⡙⢦⡍⡖
+⣿⣻⣽⣟⡷⣟⣯⡷⣟⡷⣯⢷⣻⣟⣾⣳⢯⡿⣽⢯⣟⡷⣯⢷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⢾⡽⣯⣟⣯⡷⣯⣷⣟⣯⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣵⣫⢞⡵⣏⢾⡱⢯⡞⡵⣛⢦⣛⡼⣍⠾⣰⠳⡜⣎⠶⡹⣜⢣⡝⡲⣍⢮⡱⢫⠴⣩⠞⣡⠳⡜⡥⣚⢥⡚⡜
+⣿⣽⣳⣯⣟⣯⡷⣟⣯⢿⡽⣯⢷⣻⢾⡽⣯⢿⣽⣻⢾⣽⣻⢯⣷⣻⣞⣷⣻⣞⣷⣻⣞⣷⣻⢾⡽⣯⢿⡽⣞⣯⢿⣳⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣞⡽⢮⡝⣧⡛⣵⡩⢖⣣⠞⣬⠳⣥⢛⡼⣌⢳⡱⢎⢧⡚⡵⣊⠶⣉⢧⢛⡤⣛⠴⣋⠼⡱⡜⣆⢧⡙
+⣿⢾⣽⡾⣽⣳⣟⣯⣟⣯⢿⡽⣯⣟⣯⢿⣽⣻⢾⣽⣻⢾⣽⣻⡞⣷⣻⣞⣷⣻⣞⣷⣻⢾⡽⣯⢿⡽⣯⣟⣯⣟⣯⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣣⢟⠶⣙⢦⡛⡵⢪⡝⢦⡛⡴⣋⠶⣩⢖⡹⢎⠶⡹⠴⣩⠞⡱⢎⡣⠞⡴⢋⡼⣡⠣⡵⣈⠦⣙
+⣿⢯⣷⣟⣯⡷⣯⣷⣻⣞⣯⣟⣷⣻⣞⡿⣾⣽⣻⢾⡽⣻⡞⣷⡻⢷⣛⣾⣳⣟⣾⣳⣯⡿⣽⢯⡿⣽⣳⣟⡾⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣟⣿⢻⡽⢺⡝⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣎⢯⡹⣆⠻⣜⢣⠞⣥⢛⡴⣩⢞⡱⢎⡵⢋⡞⣱⢋⠶⣉⠷⡩⢞⡱⣘⠣⢖⡡⢓⡴⣉⠖⣡
+⣿⣻⢷⣻⡾⣽⢷⣯⢷⣻⢾⡽⣞⡷⣯⣟⣷⣳⢯⣟⢾⣳⢟⣳⣟⣯⣟⣾⣳⡽⣞⡷⣯⢿⡽⣯⣟⣷⣻⣞⣿⣿⣿⡟⢥⠲⡝⣾⣟⣿⣿⣻⣿⣟⣿⣯⢿⣞⣷⣻⣽⣚⠷⣘⢧⡚⡕⢦⢫⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣲⢣⡭⢳⢬⢣⡛⡴⣋⠶⡱⢎⡵⢋⡜⣣⠞⡥⢫⡜⡱⢎⡱⢎⠴⢣⡙⢦⡙⢦⠱⣌⠚⡤
+⣿⣽⣻⢷⣻⢯⣟⡾⣯⣟⣯⢿⣽⣻⢷⣻⢮⣽⣳⢯⣻⣭⡟⣷⣞⣳⣞⡷⣯⢿⡽⣽⣏⣯⣟⣷⣻⣞⣷⣻⣿⣿⠫⠄⣉⣳⣽⣼⣿⣿⣿⢿⣟⣿⢯⣟⡿⣞⣷⡳⢞⡜⢢⠏⡖⡩⢞⡥⣛⣞⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⢣⢞⡱⢎⢧⡙⢶⡩⢞⡱⣋⠶⣩⠞⣡⠞⣱⠣⡜⡱⢊⠖⡩⢎⡱⡘⠦⡑⢎⡱⢌⡓⡔
+⣿⢾⣽⣻⣯⢿⣽⣻⢷⣻⣞⣯⢷⡯⣟⣞⡿⣼⢏⣯⢷⣳⣻⣳⣞⢷⣫⣟⡷⣯⣟⢷⣻⢮⡽⣞⣷⡻⣞⣿⣿⠁⠳⢾⣧⣽⣞⣿⣿⣷⣿⣿⣿⣿⣿⣿⣿⡿⣿⡝⣮⢞⡳⣎⠳⡵⢊⡴⢻⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢮⠳⣍⠶⣙⢦⡙⣎⠵⣊⠗⡱⢎⡱⣊⠥⡓⣬⢱⡉⢎⡱⢊⠴⣡⠣⣙⠢⡑⠦⡱⢌
+⣿⢯⣟⡷⣯⣟⣾⡽⣯⢷⣻⣞⣯⣽⣻⣼⣛⣾⣛⡾⣏⡷⣏⡷⣞⣯⢷⢯⡽⣶⢯⣛⣧⢿⡽⣳⢾⣽⣻⣿⠃⢉⡷⣿⣹⢯⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣯⡿⣯⢟⡞⣞⡳⣜⣫⡑⠳⠾⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢌⡳⢬⢳⡩⢖⡹⡸⡜⡡⢏⡕⢎⡱⣉⠖⡱⢢⠱⡘⠦⡑⣍⠲⢄⠳⣄⢣⡙⢆⡱⢊
+⣿⣯⢿⡽⣷⣻⣞⡿⣽⢯⣷⣻⢮⢷⣳⣳⠿⣜⣯⢷⣏⡿⣽⣹⢯⣞⣯⢯⣟⡾⣽⣛⣾⣫⡽⢯⣷⣫⣿⡟⢠⣯⣄⢿⣿⣿⣿⡧⣟⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⡱⢦⡝⢳⡒⠦⡄⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣎⡱⣋⠶⣙⢎⡵⢱⠱⣙⠲⡘⢎⡱⢌⢎⡑⢣⠱⣡⢣⡑⠦⡙⣌⢃⢆⠣⡜⠢⣅⠣
+⣿⣞⣿⡽⣷⢯⡿⣽⣻⣟⡶⣯⢟⣯⣗⡯⣿⠽⣞⣯⢾⣝⡧⣟⡧⢿⣜⡯⢾⡽⣞⡽⣶⢏⣿⣛⡶⣯⣿⠇⠿⢱⣿⢸⣿⣿⣡⣷⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣎⠧⡝⢲⠱⣌⡠⢘⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠳⣍⢞⡱⢎⠴⣋⢜⣢⡙⡱⢣⠜⡌⠦⣙⢂⠳⡐⠦⣑⢣⠱⡌⠎⡜⢢⡑⢣⠆⢣
+⣿⡾⣽⣻⡽⣯⣟⣷⣻⠾⣝⣳⣟⣞⡾⣽⢞⡿⣽⣺⣝⣮⡽⣞⡽⣏⡾⣝⣯⠾⣽⣹⢞⣟⣮⢿⣱⢯⣿⠀⣐⡊⣿⣧⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣜⢣⠷⢤⡡⠉⠆⣹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡎⡵⣊⢮⡱⢍⡲⢩⡒⢤⢣⡑⢣⠚⢬⡑⢢⢍⠲⣉⠖⡡⢎⠱⡘⡜⣠⠣⣘⢂⢎⡡
+⣿⡽⣷⢯⣟⣷⣻⢾⣽⣻⡽⣳⢾⣝⡾⣭⢿⣹⢧⢷⢾⣱⡟⡾⣵⢏⣷⢻⡼⣻⡵⢯⣾⣹⢮⣯⣻⣿⣧⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣻⣶⣭⡞⢣⢏⣬⡱⡌⢒⡠⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡜⢲⠍⣦⠱⡎⡜⣡⠚⡔⢢⡙⢢⡙⢦⡘⢥⢊⠵⡨⠜⡐⢎⠱⡐⢆⡡⢒⡡⢊⠴⡐
+⣿⣳⣟⡾⣽⢯⣟⡾⣽⣫⢷⣻⣞⣽⣳⣛⣞⢯⣞⠾⣼⢏⣷⡳⡽⣞⡽⣞⢧⡿⣱⠾⣭⡟⡾⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣿⡿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠾⢞⡩⣇⠣⠌⡑⢺⣿⣿⣿⣿⣿⣿⣿⣿⢟⣿⣿⣿⡑⢎⡴⢩⡒⢥⠣⣍⠲⣑⠪⡑⢎⡱⢨⠱⡌⢚⠤⢃⠲⡑⡌⢆⠓⡌⢃⠎⡱⠘⡄⢣
+⣿⡽⣞⡿⣽⣻⢾⣽⣳⢯⣟⡵⣞⣧⢷⡻⣼⢏⣾⢻⡽⣺⢧⢿⣹⢾⣹⡞⣯⠾⣝⡯⣗⢿⡿⣿⣿⣿⢿⣿⣿⣿⣿⣿⣿⣖⣿⢯⢀⢒⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⡶⡷⣎⠷⣤⢓⡒⣩⢒⣿⣿⣿⣿⡟⡹⠋⢴⣆⡘⣿⣷⣏⢲⡘⢥⡙⢆⠳⣨⠱⠌⡥⣙⠢⣅⠣⢃⠍⡆⠣⠍⠦⡑⠌⡌⠱⡈⠆⡜⢠⠃⡜⢠
+⣿⡽⣯⣟⡷⣯⣟⡾⣵⣻⠾⣽⣻⡼⣳⢏⣷⢻⢮⣏⡷⣏⢿⡺⣽⣚⣧⢟⣧⢿⣹⢾⣹⢾⣹⢟⡿⢥⣼⣿⣿⣿⣿⣿⣿⣿⣿⢳⠚⡼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢻⣭⡛⠿⡵⣉⠞⣩⠳⢦⡀⢎⣽⣿⣿⣿⣇⢠⣅⠮⠿⢿⠿⣿⣗⠦⣙⢢⡙⣌⠳⣄⠫⡜⡰⢡⠣⡔⢩⢊⠜⡰⢩⠘⡰⢁⠞⡄⢣⠑⡌⠔⡡⢊⠔⡡
+⣿⣽⣳⣯⣟⡷⣯⣟⣳⣽⢻⣳⣭⠷⣏⣟⡮⣟⡽⢮⣗⢯⡯⢷⡳⣏⣾⢫⣞⣳⢯⢾⣹⡞⣽⡞⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡭⣇⡋⡔⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣛⢮⡓⢦⡙⣷⡳⣬⣦⢥⡛⣤⡙⣦⣿⣿⣿⣿⣏⣿⢸⣿⣿⣿⣿⣾⣿⡜⣌⠣⣜⠰⢣⢌⡱⢢⢙⣂⠳⢌⡡⠎⢆⡑⢢⠡⡑⢊⠴⡈⢆⠱⣈⠒⡡⠎⡰⢁
+⣿⣞⣷⣻⢾⣽⣳⢯⣷⢫⣯⢷⣚⣯⡽⣞⡵⣯⢽⡻⣼⣛⠾⣯⢽⡳⣽⢻⡼⣽⡺⣏⡷⣽⢣⣟⡞⣿⣾⣥⣿⣿⣿⣯⣿⡳⢷⡈⡑⠌⢠⡸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡽⣶⣍⢏⡞⣴⣙⣦⡹⢆⣿⣴⣽⣾⣿⣿⣿⣿⠐⡻⢷⢩⣿⣿⣿⣿⣿⡗⣨⠱⣌⠹⣂⠎⡔⢣⢌⠢⢃⠆⢢⠍⢢⠘⡄⢣⠘⣐⠢⡑⢌⠢⡁⢎⠰⡁⢆⠡
+⣿⢾⣳⣯⢿⡾⣽⣻⣼⣻⢞⣽⣹⢶⣻⢼⣻⢼⣳⡻⣵⣫⢟⡮⣗⣻⡼⣳⡽⣖⣻⡝⣾⡱⣟⢮⣽⡟⢻⣿⣿⣿⣟⣿⣯⢳⣦⣷⣶⣿⣿⢿⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣿⣼⣆⢳⣎⠿⣖⣾⣿⣾⣿⣿⣿⣿⣿⡀⣟⢈⣦⣹⣿⣿⢿⣿⠓⡤⢓⣌⢣⠱⡊⢜⡂⢎⡱⢊⡜⢄⠚⡄⢣⠘⡄⢃⠆⡱⢈⠆⡱⢈⠆⡱⢈⠄⡃
+⣿⢯⣟⡾⣯⣟⡷⣯⢶⣏⣟⡮⣗⣻⡼⣏⡾⡽⢶⡻⣵⢫⣾⡹⣞⡵⣫⢷⣹⢞⡵⣻⢖⣻⡝⣾⣿⠁⠰⠟⣿⣯⢸⣿⣯⡧⣴⣠⣴⣶⣦⣄⣳⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣻⢿⣿⣿⣮⣷⣾⣿⣿⣯⣿⣿⣿⣿⣿⣿⣿⣟⠃⢿⣿⠟⣽⣿⣿⠣⡙⡔⢣⠜⣢⠣⢍⠢⡙⢄⢢⠡⡘⢄⠣⡘⢄⠣⡘⢄⠊⡄⠣⡐⢄⠃⡔⢠⠃⡌⡐
+⣿⢯⡿⣽⣻⢾⡽⢯⡷⣞⢧⣟⣭⠷⣝⡾⣱⠿⣭⢗⣯⢳⡞⣵⡻⣼⣛⢮⡗⣯⡝⣧⡟⣧⢻⡞⣿⠀⠀⣦⣿⣿⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣹⢯⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣠⣛⣷⠿⣫⣾⢃⠧⡱⡘⢥⠚⣄⠳⣈⠱⡈⢆⠢⡑⢌⠢⡑⢌⠢⡑⠰⡈⢆⠡⢃⠌⡂⠜⡠⢂⠅⢢⠁
+⣿⢯⣿⣳⣟⣯⣟⣯⠷⣏⡿⡼⣞⢯⣻⠼⣏⣟⢮⣻⡜⣯⢞⣳⡽⣣⢯⣳⢻⡼⣽⢲⡟⣼⡳⣏⢿⣆⠀⢿⣿⣿⣿⣯⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠶⢟⣿⢅⠺⡰⢡⡙⠤⢋⠤⠓⡄⢣⠘⡄⢣⠘⡄⢣⠘⠤⡑⢨⠑⠌⡄⢃⠢⡘⠄⡃⠔⣁⠊⡄⢃
+⣿⣻⣞⡷⣿⢮⡽⣞⣿⡹⣞⡽⣞⢯⣳⢻⡝⣮⢟⡶⣻⡝⣞⣧⢻⡵⣫⣗⢯⣳⡭⢷⣫⢷⡹⣎⡯⢿⣆⠘⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⢀⢻⡯⢌⢣⡑⢧⠘⡥⢋⠌⡓⢌⠢⡑⢌⠢⡑⢌⠢⢉⠆⢡⠂⡜⡐⢌⠂⡅⠢⡑⠌⢒⡀⠣⠌⡄
+⣿⣳⢯⡿⣽⣏⡿⣽⣲⢟⡽⣞⣭⢷⣫⢟⡼⣏⡾⣳⢧⣛⢷⡺⣝⡾⡵⣞⢯⡖⣯⡳⣝⡮⢷⡹⣞⣻⣿⡄⣿⣿⣿⡟⢛⣫⣿⣿⣿⣿⣿⣿⠟⣿⠛⢿⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠸⣹⡟⣌⠲⣡⠊⡕⢢⠡⢚⠰⡈⠖⡡⢊⠔⠡⢂⠱⡈⢌⠂⡅⢒⡈⢄⠣⡐⢡⠂⢍⠂⡌⢡⠒⠠
+⣿⡽⣯⣟⡷⣯⢷⣳⡽⢾⣹⡞⡽⣎⡷⣫⡽⣞⡵⣛⣮⢟⣮⢽⣣⢟⣵⢫⡾⣹⢖⣯⢳⡝⣧⢻⡜⣷⣿⣿⣿⣿⣿⣴⣿⡿⡏⢻⣿⣟⣤⣽⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠠⢚⡯⣐⠣⢆⠹⣠⢃⠣⢌⠢⡑⠌⠴⢁⢊⠱⡈⢆⠘⡠⢃⡘⢄⡘⢄⠢⢑⢂⠩⢄⠊⡔⠡⠌⡡
+⣿⣽⣳⣯⣟⣷⣛⣶⢻⡝⣧⡻⣝⢾⣱⣏⢷⣹⢞⡽⣎⢿⡜⣧⣛⠾⣜⢯⣳⣛⠾⣜⢧⡻⣜⢧⡻⣜⣿⣿⣿⣿⣿⣿⡟⠳⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠌⡐⢫⢄⠫⡜⢠⢃⠌⡒⢌⠢⢑⠊⡄⠣⢌⠰⡐⡈⢆⠡⢂⠔⡂⠔⡈⢆⠡⢊⠰⡈⠒⢄⠣⡘⠠
+⣿⣞⣷⣻⣞⡾⣝⡾⢯⣽⢺⡵⣏⡟⣶⡹⣞⡽⣚⡷⣹⢮⡻⣵⢫⡟⡽⣎⠷⣭⣛⢮⡳⣝⢮⡳⣝⡞⡶⣿⣿⣿⣿⡿⠈⢀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠀⠬⣙⠆⢳⠘⠤⣉⠆⡱⢈⢆⠡⢊⠰⡁⢆⠡⢂⠱⣀⠣⠌⢒⡈⢆⠡⢂⠱⡈⠤⢡⠉⡂⢆⠡⡁
+⣿⢾⣽⣳⢯⣟⡽⣞⡿⣜⣳⡽⣺⡝⣶⢫⢷⡹⣝⠾⣭⣳⢻⣜⡳⣽⢳⣭⣛⢶⣭⢳⡝⣮⢳⡝⣮⣝⡳⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⡈⠴⣈⢏⠰⣉⠒⡡⢊⠔⡡⢈⠆⡡⢒⠈⡔⡈⢆⠡⡐⢂⡑⠢⡐⢂⠅⡊⠔⡠⢃⠢⡑⠨⠄⡃⠔
+⣿⣻⢾⣽⣳⢾⣹⣳⢽⡺⣵⢫⢷⡹⣞⡽⢮⣽⣚⢯⣳⢭⣳⢭⣳⢭⣳⢮⡝⡾⣜⢧⡻⣜⢧⡻⢶⣭⢳⢧⣿⣿⣿⣿⣿⣿⣛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⡐⢈⠲⢡⢎⡱⢄⡩⢐⠡⢊⠄⣃⠰⢁⠢⡑⠰⡈⢄⠃⡔⣁⠢⡑⢄⠃⡌⠰⣁⠒⡄⢃⠌⡑⢌⠰⢁
+⣿⣽⣻⢾⡽⣞⣧⢟⣞⣳⡭⣟⢮⢷⡹⣞⣳⢮⡝⣾⣱⢻⡜⣧⣛⢮⡳⣏⢾⣱⢏⡾⣱⢏⡾⣹⢳⣎⡟⡾⣴⢛⣿⣿⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠭⡀⢡⠌⡡⢂⡅⢺⡔⡨⢔⡡⢊⡅⢒⠠⡑⣈⠒⡈⢅⠒⣈⠒⡐⢄⠒⡨⠐⡌⠰⣁⢂⠒⡈⢆⡘⠰⢈⠢⢁
+⣿⢾⡽⣯⢷⣻⢮⣛⣮⢳⣝⣮⣛⢮⢷⡹⣎⢷⣹⠶⣭⣳⣛⠶⣭⡳⣝⡞⣧⣛⢮⣳⡝⣮⢳⣝⡳⢮⣝⡳⣯⣹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢻⡁⠞⡌⠐⡤⠂⠤⢡⠘⣐⠣⣏⡐⠆⡔⣡⠈⡆⡑⠰⣀⠃⡜⢠⢊⡐⢌⠰⣈⠂⡅⢃⠌⡡⢐⢂⠱⢈⠆⢌⠡⢊⠄⠡
+⡿⣯⣟⡷⢯⢷⣫⠷⣭⢷⣚⢶⡹⢮⡳⣝⢮⣳⢭⣛⢶⣣⢏⡟⡶⣝⢮⣝⠶⣭⡳⢧⣻⣜⡳⢮⣝⡳⢮⣽⣟⣩⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⣍⡳⢍⢦⣹⡰⢬⠑⡠⠨⠰⢀⣋⠄⠳⣼⡄⣙⠰⢠⡘⠤⣁⠣⡐⢌⡐⢢⠐⡰⢈⠢⠄⡃⠔⣈⠢⠑⡂⢌⠢⡁⢎⠠⠃⡄⢊⠐
+⣿⢷⣯⣟⢯⢷⣫⣟⢮⣳⡝⣮⣛⢧⣛⢮⡳⣝⡮⣝⣮⢳⣏⣞⡳⣝⠾⣜⡻⢶⣹⢳⡳⢮⣝⡳⢮⣝⡳⣞⢿⣭⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢿⣭⢻⣌⠳⣭⢖⣦⠳⣌⢌⠡⢁⠒⢡⠈⢎⠡⠜⣷⡈⠜⣠⠘⡰⢀⢣⠘⡄⠒⡄⢣⠐⡡⢂⠱⢈⠒⡠⢁⠣⢘⠠⢂⠅⢊⠐⠡⠐⠂⠌
+⣿⣻⢶⢯⣛⡾⡵⣞⢯⢶⡹⣖⢯⡞⣭⣳⢻⣜⡳⣝⢮⡳⣞⡼⣳⢭⣛⣮⡝⣧⢏⡷⣹⢳⢮⣝⡳⣎⠷⣭⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢯⣽⣳⢮⡳⣎⡳⡼⡞⡴⢫⡜⠌⢦⠉⠈⠄⡐⠂⡜⢨⢽⣿⡔⢂⠱⣀⠃⢆⠱⣈⠱⡈⢆⠱⣀⠣⡘⢄⠣⡐⢡⠊⡄⠣⢌⠘⡀⢊⠡⠌⠡⢈
+⣟⡷⢯⣟⡽⣺⣝⢾⡹⣎⢷⡹⢮⣝⠶⣭⡳⢮⣝⢮⡳⣝⢮⡳⣝⢮⣳⢮⣝⢮⡻⡼⣭⣛⠾⣜⡳⣭⣛⠶⣭⢿⣹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣏⣟⡳⢞⡥⢯⡽⣭⢳⢧⡹⢜⣣⡙⢾⡀⠎⠡⠀⢄⠡⡀⠣⢎⢿⣿⣧⣖⡠⢉⠆⡒⠤⡑⡈⢆⠱⣀⠣⡘⢄⠣⡘⢄⠣⡘⠰⡈⠆⡁⠢⠐⡈⢂⠁
+⣯⣟⣟⣮⡽⣳⢞⣯⢳⡝⣮⢽⡳⣎⡟⡶⣝⢯⡞⣧⣛⢮⢷⡹⣞⢧⣛⠾⣜⢧⡻⣵⢣⣏⠿⣜⡳⢧⣏⠿⣜⡧⣏⡿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⣟⢾⡸⣹⡍⣞⣱⠞⣥⢻⢦⡙⣦⠧⡙⢦⡑⢎⠡⡀⠆⠰⢀⢣⠘⡼⣷⣏⡿⣿⣶⣾⣤⣵⣠⡑⣈⠒⠤⢑⠰⡈⢆⠱⡈⢆⠡⢃⠜⡠⠑⣂⠑⡠⠁⠌
+⣷⣻⡼⢶⣻⢵⣫⢞⣧⢻⡜⣧⢻⡼⣹⢳⡝⣮⡝⡶⣭⣛⢮⣳⡝⣮⣝⡻⣜⢧⡻⣜⡳⣞⡽⢮⣝⡳⣎⠿⣜⡳⣝⠾⣭⣛⠿⡿⢿⠿⣿⢿⣿⠋⠛⠛⠿⣿⣿⣿⣿⣿⣿⣿⣞⡧⢷⡩⡜⠶⣥⢯⡙⣧⣾⠵⣣⠝⣌⠣⡜⢢⠡⡁⠂⠅⣂⠢⠘⢤⢫⡝⣻⣷⣻⢞⣽⣻⣟⣿⡿⣿⣶⣮⣴⣡⣈⠆⡑⠌⢢⠁⢎⡐⠡⡀⠎⢠⢁⠂
+⣷⣳⢻⣏⣞⢧⣛⡾⣜⢧⡻⣜⣧⢻⡵⣫⢾⡱⣏⢷⣣⢟⣮⢳⡝⡶⣭⢳⡝⣮⢳⣭⢳⡝⣞⡳⢮⡝⣾⡹⢧⡻⣜⡻⢶⡍⡷⣍⣛⠮⡵⢎⣽⠀⠀⠀⠀⢮⣿⣿⣿⣿⣿⣿⡿⡞⣥⢳⡉⢳⡜⣦⢿⡻⣌⠷⣢⠝⣠⠒⡌⢠⠃⡔⢁⠂⠴⢈⡑⢎⡳⢼⢯⡷⣯⣟⣮⢷⣻⣾⣟⡿⣽⣿⣻⣿⣿⣿⣷⣾⣤⣉⡤⠘⢠⠁⡌⠂⡄⢂
+⡷⢯⣛⣞⢮⡻⣜⡳⣝⢮⢷⡹⣎⢷⡹⢧⣏⢷⡹⣎⢷⣫⢞⣧⢻⡵⣫⢷⡹⣎⢷⡺⣝⠾⣱⢏⡳⣝⢶⣹⢳⡝⣧⣛⢧⠞⡵⢎⢧⡛⣜⢣⢾⡃⠀⠀⠀⠠⣼⣿⣿⣿⣿⣟⣷⡻⣬⢓⣌⠶⣹⣯⣗⣳⣭⠳⡆⣍⠲⠠⠄⠃⡜⠐⡌⡀⢂⠬⠑⡎⡵⢋⡞⣹⢳⣻⣾⣿⢿⣟⣾⣟⣷⣿⣿⣽⣷⡿⣯⣿⣿⣿⣿⣿⣦⣴⣀⠡⠐⠂
+⣟⢯⡽⣎⣯⢳⡭⣗⢯⡞⣧⢻⡜⣯⣝⡳⢮⣏⢷⡹⣎⢷⣫⢞⣧⢻⡵⣫⢷⡹⣎⠷⣭⢻⡥⣏⢷⡹⣎⢷⣫⢞⡵⣭⠺⡭⣝⢮⢣⡝⣬⠓⡾⡇⠀⠀⠀⠐⢼⣽⣿⣿⣿⣿⣷⣿⠶⣏⢬⣛⣷⣻⣞⡷⣊⠷⣉⠦⣁⠣⣘⠐⡈⠱⣀⠖⠡⠀⡝⡘⡔⠫⡔⢣⡞⣿⣿⣿⣿⣿⣿⣾⣿⣿⣾⣿⣾⢿⣟⣷⡿⣯⣿⣿⢿⣿⣿⣿⣾⣤
+⣯⣛⢾⡱⣏⢷⡹⣎⢷⡹⣎⢷⣛⠶⣭⣛⠷⣎⢯⡳⡽⣎⢷⣫⢞⣧⢻⡵⣫⠷⣭⢻⡜⣧⢳⡝⣎⢷⡹⣎⢷⣋⠾⣜⢫⡵⣚⡬⢳⡜⢦⡛⡴⣧⠀⠀⠀⠀⠀⢙⣿⣿⣿⣿⣿⣯⡿⣜⡶⣹⣾⢯⣟⣳⡽⢎⡕⢢⠰⣁⠣⡜⢀⠡⡘⢠⠁⢆⠐⡤⢩⠓⣬⢓⡞⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣽⣿⣿⣯⣿⣻⣿⣿
+⡷⣭⡗⣯⠽⣎⢷⣫⢞⡵⣫⡞⣭⣛⠶⣭⢻⡼⣣⢟⡵⣫⢞⡵⣫⢞⣧⢻⡵⣻⡜⣧⢻⣜⡳⢞⡭⡞⣵⢫⡞⣭⢻⢬⡳⣜⡱⢺⡱⢎⢧⡙⡖⣿⠀⠐⠄⢀⠀⠀⠉⣿⣿⣿⣿⣿⣟⡷⣏⣷⣿⣿⢿⣻⡝⢮⡜⣡⠓⠬⣑⠜⣨⠂⡁⢃⡚⢤⡈⢠⢃⡝⢦⣛⡾⣽⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣿⣽⣿⣽⣿
+⣟⡵⣻⣜⡻⣜⢧⣛⢮⡳⢧⡻⣵⢫⡟⡼⢧⡻⣵⢫⡞⣵⢫⡞⣵⢫⡞⣧⣛⢶⡹⣎⢷⣪⠽⣹⢼⣙⢮⣳⢹⡜⣣⢳⣙⠦⣝⢣⡝⢎⢶⣭⡿⠛⠀⠀⠀⢹⠆⣄⣀⠿⣿⣿⣿⣿⣯⣿⡽⣾⣿⣯⡿⣧⣛⢧⡚⡥⢊⠶⣩⢎⡡⢚⠄⢃⠜⡢⣄⠣⡘⣬⢣⠿⣽⣳⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣯⢞⡵⣎⡷⣹⢎⣯⢳⡽⣳⡝⣮⢳⡽⣹⢧⡻⣜⢧⡻⣜⢧⣻⡜⣧⣛⢶⡹⣎⢷⡹⢶⣩⢏⠷⡮⣝⡞⣬⡓⣞⣱⢫⡜⣹⢬⣳⡾⠟⠋⠁⠀⢀⠀⠀⠀⢸⡅⣦⢉⡉⢿⣿⣿⣿⣿⣽⣿⣿⣿⣿⡿⣖⡻⢦⡛⣌⢏⡾⡵⢪⡕⢯⣌⢣⣌⡱⢎⡧⣙⣤⢏⡿⣵⣿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⢷⣫⢞⡵⣫⢗⡯⣞⢧⡻⣵⢻⡜⣧⢻⡵⣫⢷⡹⣎⢷⡹⣎⢷⡹⢶⡹⣎⢷⡹⢎⡗⣯⣜⢫⢷⡹⡖⣽⠲⣝⡼⢲⣍⣾⠟⠋⡁⢀⠀⠀⠀⢰⣿⠀⠀⠀⠈⡇⠸⣧⣌⣻⣟⣿⣿⣿⣿⣿⣿⣿⣿⡿⣥⣋⢷⡙⣞⣮⡽⣽⢳⣚⠷⣜⡲⣬⡳⢯⣶⢻⣼⣻⣞⣿⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣟⡼⣫⢞⡵⣫⢞⡽⣎⠷⣭⢳⡝⣮⢷⡹⢧⣏⢷⡹⣎⢷⡹⢮⡝⣧⢳⡝⡮⡝⣏⡞⢶⢎⡿⢬⡳⣝⠮⣝⣲⣽⠟⠋⠀⠠⠀⢀⡀⢀⡈⢷⣾⣿⠀⠀⢠⠀⢻⡄⢽⣷⣎⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢧⡍⣎⢿⣼⣳⣿⣿⣿⣽⣿⣿⣿⣿⣿⣿⣾⣿⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⡾⣱⣏⣞⡳⣝⢮⣳⢭⡟⣼⢫⡞⣵⢫⣝⡳⣎⢷⡹⣞⢧⣛⢧⢻⡜⣳⠞⡵⣋⢶⡹⣚⢮⡜⢧⣛⡼⣹⣶⠟⢡⣀⠈⢒⠠⣇⢢⣽⣦⣿⣿⣿⣿⠃⠀⠈⢣⠀⢳⠈⢻⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⣟⡼⣣⢟⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⢿⣻⢯⣟⡳⡽⣎⢷⣛⣾⣳⣿⣿⣿⣿⣿⣿⣿
+⣳⢯⡽⣹⢧⡻⣜⢯⡞⣵⢫⡞⣵⢫⡞⣽⢣⡟⡼⢧⡻⣜⡻⣜⢮⣓⢏⡖⢧⠻⣜⡣⢟⣬⢓⡮⢫⣵⡿⠋⠀⠈⢻⣤⣚⡤⢿⡞⣿⣻⣿⣿⣿⠏⠀⠀⠀⠈⡆⠸⡄⠘⣿⣿⣿⣿⣿⣿⣿⣿⡵⣿⣿⣿⣧⣻⣾⣿⣿⣿⣿⣿⣿⣿⢿⡿⣿⣿⡿⣟⣿⣯⣿⣟⡿⣿⣻⣿⣽⣟⣷⣿⢾⣟⡾⣽⣳⢧⣻⣼⣻⣽⣿⣿⣿⣿⣿⣿⣿⣿
+⢯⡞⣵⢏⡾⣱⢯⡞⡽⣎⢷⡹⣎⢷⡹⣎⢷⡹⣝⢧⡟⣼⡱⢏⡶⢭⡺⣜⢫⣝⡲⢭⣓⢮⡹⣼⡟⠃⠀⠀⠀⣐⡠⠞⣿⡽⢎⡽⣶⢿⣾⢏⡆⠀⠀⠀⠀⠀⠑⠀⣧⠀⢺⣿⣿⣿⣿⣿⣿⡿⠀⣿⣿⣿⣿⣿⣿⣿⡿⣿⣻⣝⡮⣝⡾⣿⣳⣿⣟⣿⣿⣽⣷⣿⣿⣿⣿⣷⣿⣿⣿⣯⣿⣾⣟⣷⣿⣻⣷⣯⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣟⡼⣣⡟⣼⢣⡟⣼⢳⡝⣮⢳⡝⣮⢳⡝⣾⡱⣏⠾⣜⢧⡝⡞⣜⡣⢗⣎⠳⣎⣵⣫⣼⣶⠟⣉⣠⠀⠀⠀⢀⡿⣷⢍⣙⣧⣿⣾⣿⣫⣝⣾⣤⣄⣲⣤⣹⣦⠲⠤⣄⠀⠈⢿⣿⣿⣿⣿⣿⠃⢤⣿⣿⡿⢫⣙⢮⣳⣿⣿⣿⣿⣿⣯⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣻⣷⣿⡿⣿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⡷⢯
+⣞⡳⣝⢾⡱⣏⣞⢧⡻⣜⢧⡻⣜⢧⡟⣼⢣⡝⣮⣛⡼⢎⣞⡹⡲⣍⣷⡾⠟⢋⢉⣥⣶⣾⣿⣿⣿⣿⠿⡩⢞⣷⠟⠉⡐⢎⠛⡍⢯⡽⣻⣿⡻⢿⣿⣿⣿⣿⣷⣦⣜⣦⡀⠹⣿⣿⣿⣿⠏⢀⣿⡿⠉⢁⠣⣞⣯⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⡿⣟⣿⣟⣿⡾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣻⠾⣝⢯
+⣯⣝⢾⣣⢟⡼⣎⡷⣹⢎⣯⢳⡝⣮⡝⣮⢳⡝⢶⡹⣜⣫⣖⣽⠿⢋⡡⢴⠶⣞⡾⣞⣷⣿⣾⣿⣿⣟⡶⣡⣿⠋⠀⠀⢁⠢⠕⡚⢡⢎⡱⠭⣽⠿⣟⢿⡻⣝⣮⣿⣿⣿⣷⡧⣿⣿⣿⡋⢥⣿⡏⣠⣄⣠⣔⣫⢿⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⢿⣿⣟⡿⣿⣾⣿⣿⡿⣟⣿⣿⣽⣿⣿⣿⣿⣿⣿⣿⣿⢿⣻⣽⣯⢿⡽⣞
+⡷⢮⣳⡝⣮⢳⡝⣾⡱⣏⡞⣧⣛⢶⣽⣮⡷⠿⢛⠛⡫⢍⠋⡅⣎⢱⡙⣎⠿⣜⣻⡽⣿⣾⣿⣿⣿⣿⣿⣿⠏⢀⢠⡐⣠⠉⠒⠬⡁⢎⡰⢿⣬⡻⣜⣯⢷⣻⣿⣿⣿⣿⣿⣷⣉⡟⢦⡑⣮⢯⣴⣭⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢷⣻⡾⣿⣟⣯⡿⣿⣿⣯⣟⣿⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣻⡷⣯⡿⣽⢯
+⣽⢳⢧⡻⣜⢧⡻⢶⣹⢮⣽⡶⠿⠛⠉⠀⠐⠤⠣⡘⠐⢊⠒⡌⢂⠧⣜⡎⣷⣹⡾⣽⣷⡿⣿⣿⣿⣿⠿⣡⠲⣌⢶⡹⢿⣆⣙⣲⠱⣮⢙⠶⣣⢿⣽⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡦⠥⣹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣻⢷⣯⣟⣷⣿⣳⣯⢿⡽⣷⣿⣾⣿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣳⣿⣿⡷⣟⣯⣿
+⣳⢯⡞⣵⣫⢞⣽⣳⠟⠋⠁⠀⠀⠀⠀⠐⠠⠂⢀⠈⠄⢡⠘⡰⣍⡞⣴⢯⡷⣯⣟⣿⡾⣟⡿⡹⣍⢆⡳⢣⡽⣘⣮⡟⣽⣿⣿⢣⠷⣌⣯⣛⣷⣻⢾⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⣶⣹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⣟⣯⢷⡿⣜⢯⢾⣭⢿⡿⣿⡿⣿⣾⢿⣿⡿⣿⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣿⣾⣿⣻⣿⣾
+⣟⢮⣽⢺⣵⡿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠤⣀⠢⡜⢢⡝⢲⣟⡾⣽⣯⣿⣿⣻⡽⣛⢥⢳⡱⢎⢎⣝⢣⡻⣵⣳⡿⣟⣿⣞⣯⢿⣝⡶⣛⡾⣽⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠉⢳⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢯⣟⡾⣞⡯⣝⢿⣫⡗⣾⣯⣿⡽⣿⣿⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣟⣿⣷⣿
+⣻⢞⣼⡟⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣂⠔⣠⠒⣭⠳⡜⣧⣿⣟⣷⣯⢷⣫⢇⡧⣙⢎⢣⠳⡞⡼⣌⢷⣻⢽⣯⢿⡽⣯⣟⡞⡿⣮⣽⢳⣿⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠘⢦⡈⢿⣞⣿⣿⣿⣿⣷⡿⣿⣟⡾⣽⣟⡾⣽⢣⡟⣽⣺⢷⣻⢽⣳⣯⣿⢿⣻⣿⣻⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣿
+⣿⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⢬⡸⣔⢫⢖⣻⣾⣿⠿⣝⡾⣡⠧⣍⠞⣰⠙⢎⡲⢥⣛⣼⣻⡼⢯⡟⣞⢯⣿⣱⢿⡜⣷⡝⣾⢻⣶⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⢳⣄⡆⣹⣜⣿⣿⣿⣿⣿⣿⣿⢿⣟⣿⣳⢏⡷⣭⢗⣯⣛⣷⢻⣾⢯⣿⣻⣽⣿⣿⣿⣿⣿⣿⣯⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⢆⡞⠶⣱⣮⣾⣿⣿⢿⡽⣛⡮⢱⡡⣚⡜⡸⢣⢛⣤⡝⣫⣼⠶⡽⢾⡹⡞⡭⢞⠶⢭⢞⡹⣞⡽⣮⢿⣟⣯⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡦⠀⣻⣽⢻⡼⣾⢿⣿⣿⢿⣻⣿⣿⣾⣳⢯⡻⣼⢛⡾⢧⣻⣼⣻⣾⢿⣽⣿⣻⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡒⡌⣞⣬⣿⣿⣿⣿⣿⣯⣿⡟⢧⠘⡅⣶⢩⠞⣱⢛⣼⢲⡝⣣⢟⡽⢞⡹⢻⡱⣛⢮⣙⣧⢫⡷⣭⢷⣯⣟⣾⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣰⣿⣿⣻⣿⣯⣿⣿⣿⣿⣿⣟⣮⢷⡏⣯⢳⣭⢻⡼⣟⣧⣿⣹⣽⣻⣯⣿⢿⣿⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠄⠈⠀⠀⠀⡜⣰⣿⣿⣿⣻⣽⣯⢿⣿⣯⠳⡜⢠⢛⡘⢤⡃⣞⡥⢏⡞⡶⣙⢮⣟⡼⡳⣍⣳⣫⡝⣮⣝⣮⣻⡽⢯⣿⣾⣽⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣻⣿⡷⢧⣿⣿⣿⣿⢯⣟⡾⣽⢻⡯⣟⣳⡛⢾⣳⣽⡽⣞⡿⣿⢾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠠⡘⡼⣼⣿⣻⣷⢿⣽⣿⣽⣿⣿⣦⠃⡄⠙⠦⠸⠀⡗⡌⢲⡛⣜⠶⣙⡞⣼⣱⢯⣝⣣⢿⣝⣯⣟⣾⣳⣿⣿⢯⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⡿⣼⣿⣋⢿⡟⣞⣻⣞⡷⣹⢏⡷⣫⢷⣹⣛⣷⣻⣽⣿⣽⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⢠⡉⣥⢻⣽⣷⢿⣷⣯⣿⣿⣿⣿⣿⣿⠂⠄⠡⠒⠐⠈⠳⢐⡚⡡⢜⡭⢻⡴⣛⢶⣭⡞⣧⣟⣯⢿⣭⣟⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⡛⢿⠙⣇⣿⢫⡝⣭⣓⣮⠷⣳⢾⣱⢟⣯⣟⣯⣷⣻⣾⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣻⣷⣟⡷⣯⣿⣿
+⠀⠀⣀⣄⣠⠌⢦⡱⣯⣿⣻⣾⡿⣯⣿⣿⣿⣿⣿⣿⡏⠙⠀⠀⠀⡰⣃⡤⢋⣜⣍⣫⣜⣣⣷⣻⣟⣶⡿⣟⣾⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⡉⠁⡫⢜⠣⢯⣜⣦⠳⣬⠷⣽⣚⣷⣞⣳⣾⣷⣿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢯⣿⣹⣿⣽⣯⣿*/

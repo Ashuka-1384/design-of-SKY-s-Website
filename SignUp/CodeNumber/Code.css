@@ -1,0 +1,253 @@
+/*------------------------------------------------رنگ های اصلی----------------------------------------------------*/
+:root{
+    --Imperial-Gold: #f5c242;
+    --Arctic-White: #FCFCFC;
+    --Void-Black: #0A0A0A;
+    --Celestial-indigo: #2B2D42;
+}
+/*-----------------------------------------------کد اصلی-----------------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    /* background-color: var(--Celestial-indigo); */
+    background: linear-gradient(to bottom , var(--Celestial-indigo) , #000);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 5% 0 5% 0; */
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* display: grid;
+    grid-template-rows: 2fr 1fr 1fr 1fr; */
+    min-height: 100vh;
+}
+/*-----------------------------------------------SkyLogo-----------------------------------------------------*/
+.SkyImage{    
+    margin: -310px 0 -320px 0;
+    filter: drop-shadow(0 0 200px gold);
+    transform: scale(0.405);
+    transition: transform 0.5s ease;
+    animation: MoveInLogo 3s linear;
+    z-index: 50;
+    will-change: transform, opacity;
+    cursor:cell;
+}
+.SkyText{
+    margin: -10px 0 20px 0;
+    filter: drop-shadow(0 0 20px gold);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--Imperial-Gold);
+    text-shadow: 0 0 5px var(--Imperial-Gold);
+    display: flex;
+    flex-direction: inherit;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 50;
+}
+/*----------------------------------------------SignUpCode Inputs------------------------------------------------------*/
+.SignUpCode{
+    width: 100%;
+    display: flex;
+    flex-direction: inherit;
+    justify-content: center;
+    align-items: center;
+}
+.SignUpCode p{
+    display: inline;
+}
+.SignUpCode span{
+    opacity: 0;
+}
+.SignUpCode span.one{
+    animation: TextMove 1s 1s forwards;
+}
+.SignUpCode span.two{
+    animation: TextMove 1s 1.2s forwards;
+}
+.SignUpCode span.three{
+    animation: TextMove 1s 1.4s forwards;
+}
+.SignUpCode span.four{
+    animation: TextMove 1s 1.6s forwards;
+}
+.SignUpCode span.five{
+    animation: TextMove 1s 1.8s forwards;
+}
+.SignUpCode span.six{
+    animation: TextMove 1s 2s forwards;
+}
+.SignUpCode span.seven{
+    animation: TextMove 1s 2.2s forwards;
+}
+.SignUpCode span.eight{
+    animation: TextMove 1s 2.4s forwards;
+}
+.SignUpCode span.nine{
+    animation: TextMove 1s 2.6s forwards;
+}
+.SignUpCode span.ten{
+    animation: TextMove 1s 2.8s forwards;
+}
+.SignUpCode span.eleven{
+    animation: TextMove 1s 3s forwards;
+}
+.SignUpCode span.twelve{
+    animation: TextMove 1s 3.2s forwards;
+}
+.SignUpCode span.thirteen{
+    animation: TextMove 1s 3.4s forwards;
+}
+.SignUpCode span.fourteen{
+    animation: TextMove 1s 3.6s forwards;
+}
+.SignUpCode .text{
+    width: 100%;
+    min-width: 200px;
+    max-width: 400px;
+    margin: 0 0 20px 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid var(--Imperial-Gold);
+    background-color: transparent;
+    color: var(--Arctic-White);
+    text-shadow: 0 0 1px var(--Arctic-White);
+    background: linear-gradient(135deg , var(--Celestial-indigo) , var(--Void-Black));
+    font-size: 20px;
+    display: flex;
+    flex-direction: inherit;
+    z-index: 100;
+    transition: all 0.7s ease;
+    animation: MoveInInput1 2.5s linear;
+}
+.SignUpCode .text:hover{
+    background: linear-gradient(to left , var(--Void-Black) , #393c5e);
+}
+.SignUpCode .button{
+    width: 100%;
+    min-width: 200px;
+    max-width: 400px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid var(--Imperial-Gold);
+    background-color: var(--Imperial-Gold);
+    color: var(--Celestial-indigo);
+    font-size: 21px;
+    font-weight: 700;
+    cursor: pointer;
+    text-shadow: 0 0 3px var(--Celestial-indigo);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.8s ease;
+    animation: MoveInSignUp 2.5s linear;
+}
+.SignUpCode .button:hover{
+    background: linear-gradient(45deg , var(--Celestial-indigo) , var(--Void-Black));
+    color: var(--Imperial-Gold);
+    text-shadow: 0 0 3px gold;
+}
+/*------------------------------------------------Animations----------------------------------------------------*/
+@keyframes MoveInLogo{
+    0%{
+        opacity: 0%;
+        transform: scale(4);
+    }
+    80%{
+        filter: drop-shadow(0 0 10px gold);
+    }
+    100%{
+        opacity: 100%;
+        transform: scale(0.405);
+        filter: drop-shadow(0 0 100px gold);
+    }
+}
+@keyframes MoveInInput1{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
+@keyframes MoveInSignUp {
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 100;
+        transform: translateY(0);
+    }
+}
+@keyframes TextMove{
+    0%{
+        transform: scale(50);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 100%;
+    }
+}
+/*------------------------------------------------Responsive----------------------------------------------------*/
+@media (max-width: 768px) {
+    .SkyImage{
+        margin: -350px 0 -350px 0;
+        transform: scale(0.32);
+    }
+    .SignUpCode p{
+        font-size: 12px;
+    }
+}
+@media (max-width: 600px) {
+    .SkyImage{
+        margin: -390px 0 -370px 0;
+        transform: scale(0.32);
+    }
+    .SignUp .text , .SignUp .button{
+        max-width: 300px;
+    }
+    .SignUp p{
+        font-size: 12px;
+    }
+}
+@media (max-width: 450px) {
+    .SkyImage{
+        margin: -420px 0 -420px 0;
+        transform: scale(0.22);
+    }
+    .SignUp .text , .SignUp .button{
+        max-width: 200px;
+    }
+    .SignUp .text{
+        font-size: 14px;
+    }
+    .SignUp p{
+        font-size: 9px;
+    }
+}
+@media (max-width: 330px) {
+    .SkyImage{
+        margin: -420px 0 -420px 0;
+        transform: scale(0.21);
+    }
+    .SignUp .text , .SignUp .button{
+        max-width: 200px;
+    }
+}
